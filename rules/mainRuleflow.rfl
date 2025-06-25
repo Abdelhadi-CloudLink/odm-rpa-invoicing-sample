@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>mainRuleflow</name>
+  <uuid>452f8e52-bf1e-41e5-b742-b65c3137f569</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Sequential" ExitCriteria="None" Identifier="discount_and_vat" Ordering="Default">
+        <InitialActions Language="irl"><![CDATA[          ]]></InitialActions>
+        <RuleList>
+          <Package Name="Discount"/>
+          <Package Name="VAT"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Sequential" ExitCriteria="None" Identifier="tax_and_gross_price" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="ea94c13b-fd88-434b-8ee5-0abff38df146"/>
+          <Rule Uuid="be2b86e8-f91a-4c64-b5c5-d265deaf71fc"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Sequential" ExitCriteria="None" Identifier="net_price" Ordering="Default">
+        <InitialActions Language="irl"><![CDATA[
+          ]]></InitialActions>
+        <RuleList>
+          <Rule Uuid="e365f9e3-fc61-48f4-96e6-4918100c262b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Sequential" ExitCriteria="None" Identifier="result" Ordering="Default">
+        <InitialActions Language="irl"><![CDATA[Result = new myModel.Result();
+Result.tax = new myModel.Tax();]]></InitialActions>
+        <RuleList>
+          <Rule Uuid="02156e5a-9367-47e0-9bd1-a6cba3fa141c"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="layer_0" Task="task_0"/>
+      <TaskNode Identifier="layer_1" Task="task_1"/>
+      <TaskNode Identifier="layer_3" Task="discount_and_vat"/>
+      <TaskNode Identifier="layer_5" Task="tax_and_gross_price"/>
+      <TaskNode Identifier="layer_6" Task="net_price"/>
+      <TaskNode Identifier="layer_7" Task="result"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="layer_0" Target="layer_3"/>
+      <Transition Identifier="transition_2" Source="layer_3" Target="layer_5"/>
+      <Transition Identifier="transition_4" Source="layer_5" Target="layer_6"/>
+      <Transition Identifier="transition_5" Source="layer_6" Target="layer_7"/>
+      <Transition Identifier="transition_6" Source="layer_7" Target="layer_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="layer_7#name">layer_7</Data>
+      <Data Name="layer_1#name">layer_1</Data>
+      <Data Name="layer_5#label">Tax Rate and Gross Price</Data>
+      <Data Name="layer_3#width">146.52539</Data>
+      <Data Name="layer_5#name">layer_5</Data>
+      <Data Name="layer_0#width">21.0</Data>
+      <Data Name="layer_5#width">116.625</Data>
+      <Data Name="layer_3#label">Discount and VAT</Data>
+      <Data Name="layer_6#label">Net Price</Data>
+      <Data Name="layer_0#name">layer_0</Data>
+      <Data Name="layer_0#height">21.0</Data>
+      <Data Name="layer_3#name">layer_3</Data>
+      <Data Name="layer_1#height">22.0</Data>
+      <Data Name="layer_6#name">layer_6</Data>
+      <Data Name="layer_7#width">102.0</Data>
+      <Data Name="layer_6#y">365.26172</Data>
+      <Data Name="layer_7#x">73.262695</Data>
+      <Data Name="layer_5#height">94.66406</Data>
+      <Data Name="layer_6#height">66.39844</Data>
+      <Data Name="layer_7#y">468.46094</Data>
+      <Data Name="layer_5#x">73.262695</Data>
+      <Data Name="layer_6#width">129.99152</Data>
+      <Data Name="layer_5#y">234.73047</Data>
+      <Data Name="layer_6#x">73.262695</Data>
+      <Data Name="layer_3#x">73.262695</Data>
+      <Data Name="layer_7#height">40.0</Data>
+      <Data Name="layer_3#height">66.39844</Data>
+      <Data Name="layer_3#y">104.19922</Data>
+      <Data Name="layer_0#y">10.5</Data>
+      <Data Name="layer_1#x">73.262695</Data>
+      <Data Name="layer_1#y">549.46094</Data>
+      <Data Name="layer_0#x">73.262695</Data>
+      <Data Name="layer_7#label">Result</Data>
+      <Data Name="layer_1#width">22.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

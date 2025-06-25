@@ -1,0 +1,7 @@
+variables {
+  myModel.Vat VAT;
+  java.lang.Double Discount;
+  java.lang.Double Tax_Rate;
+  java.lang.Double Gross_Price;
+  java.lang.Double Net_Price;
+}

@@ -1,0 +1,31 @@
+package Result {
+   use Net_Price;
+   use Gross_Price;
+   use Tax_Rate;
+   use Discount;
+   use VAT;
+   use Result;
+   /**
+ */
+rule Result$_$rule$45$1 {
+      property ilog.rules.business_name = "Result_rule-1";
+      property ilog.rules.package_name = "Result";
+      priority = 0;
+      property status = "new";
+      when {
+         the_net_price_input: java.lang.Double() from Net_Price;
+         the_gross_price_input: java.lang.Double() from Gross_Price;
+         the_tax_rate_input: java.lang.Double() from Tax_Rate;
+         the_discount_input: java.lang.Double() from Discount;
+         the_VATInput: myModel.Vat() from VAT;
+      } then {
+         Result.grossPrice = the_gross_price_input;
+         Result.netPrice = the_net_price_input;
+         Result.tax.rate = the_tax_rate_input;
+         Result.tax.label = the_VATInput;
+         Result.discount = the_discount_input;
+         ?context.updateContext();
+      }
+   }
+}
+

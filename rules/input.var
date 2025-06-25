@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>input</name>
+  <uuid>14769e99-5bfe-4e2c-a339-a1d74e686830</uuid>
+  <variables name="price" type="java.lang.Double" initialValue="" verbalization="the price"/>
+  <variables name="quantity" type="java.lang.Long" initialValue="" verbalization="the quantity"/>
+  <variables name="category" type="myModel.Category" initialValue="" verbalization="the category"/>
+</ilog.rules.studio.model.base:VariableSet>

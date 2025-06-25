@@ -1,0 +1,36 @@
+<b2x:translation xmlns:b2x="http://schemas.ilog.com/JRules/1.3/Translation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ilog.com/JRules/1.3/Translation ilog/rules/schemas/1_3/b2x.xsd">
+    <id>4f98f52e-a596-4439-a633-4beca763c7d9</id>
+    <lang>ARL</lang>
+    <class>
+        <businessName>myModel.Result</businessName>
+        <constructor>
+            <parameter type="java.lang.Double"/>
+            <parameter type="java.lang.Double"/>
+            <parameter type="java.lang.Double"/>
+            <parameter type="myModel.Tax"/>
+            <body language="arl"><![CDATA[
+            myModel.Result that = new myModel.Result();
+that.discount = discount;
+that.grossPrice = grossPrice;
+that.netPrice = netPrice;
+that.tax = tax;
+return that;
+
+            ]]></body>
+        </constructor>
+    </class>
+    <class>
+        <businessName>myModel.Tax</businessName>
+        <constructor>
+            <parameter type="myModel.Vat"/>
+            <parameter type="java.lang.Double"/>
+            <body language="arl"><![CDATA[
+            myModel.Tax that = new myModel.Tax();
+that.label = label;
+that.rate = rate;
+return that;
+
+            ]]></body>
+        </constructor>
+    </class>
+</b2x:translation>

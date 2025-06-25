@@ -1,0 +1,137 @@
+// begin DT Discount_General_DT
+// -- begin rule 'Discount_General_DT 0'
+package Discount {
+   use quantity;
+   use category;
+   use Discount;
+   /**
+ */
+rule Discount$_$General$_$DT_0 {
+      property ilog.rules.business_name = "Discount_General_DT 1";
+      property ilog.rules.dt = "Discount.Discount_General_DT";
+      property ilog.rules.group = "Discount.Discount$_$General$_$DT";
+      property ilog.rules.package_name = "Discount";
+      priority = 0;
+      property status = "new";
+      when {
+         the_quantity_input: java.lang.Long() from quantity;
+         the_category_input: myModel.Category() from category;
+         myModel.Category() from category;
+         evaluate ((((category.equals(myModel.Category.Books))) && (quantity.longValue() in [100, 1000[)));
+      } then {
+         Discount = java.lang.Double.valueOf((double) 10 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'Discount_General_DT 0'
+// -- begin rule 'Discount_General_DT 1'
+package Discount {
+   use quantity;
+   use category;
+   use Discount;
+   /**
+ */
+rule Discount$_$General$_$DT_1 {
+      property ilog.rules.business_name = "Discount_General_DT 2";
+      property ilog.rules.dt = "Discount.Discount_General_DT";
+      property ilog.rules.group = "Discount.Discount$_$General$_$DT";
+      property ilog.rules.package_name = "Discount";
+      priority = 0;
+      property status = "new";
+      when {
+         the_quantity_input: java.lang.Long() from quantity;
+         the_category_input: myModel.Category() from category;
+         myModel.Category() from category;
+         evaluate ((((category.equals(myModel.Category.Books))) && (quantity.longValue() >= 1000)));
+      } then {
+         Discount = java.lang.Double.valueOf((double) 20 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'Discount_General_DT 1'
+// -- begin rule 'Discount_General_DT 2'
+package Discount {
+   use quantity;
+   use category;
+   use Discount;
+   /**
+ */
+rule Discount$_$General$_$DT_2 {
+      property ilog.rules.business_name = "Discount_General_DT 3";
+      property ilog.rules.dt = "Discount.Discount_General_DT";
+      property ilog.rules.group = "Discount.Discount$_$General$_$DT";
+      property ilog.rules.package_name = "Discount";
+      priority = 0;
+      property status = "new";
+      when {
+         the_quantity_input: java.lang.Long() from quantity;
+         the_category_input: myModel.Category() from category;
+         myModel.Category() from category;
+         evaluate ((((category.equals(myModel.Category.Computers))) && (quantity.longValue() in [5, 10[)));
+      } then {
+         Discount = java.lang.Double.valueOf((double) 10 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'Discount_General_DT 2'
+// -- begin rule 'Discount_General_DT 3'
+package Discount {
+   use quantity;
+   use category;
+   use Discount;
+   /**
+ */
+rule Discount$_$General$_$DT_3 {
+      property ilog.rules.business_name = "Discount_General_DT 4";
+      property ilog.rules.dt = "Discount.Discount_General_DT";
+      property ilog.rules.group = "Discount.Discount$_$General$_$DT";
+      property ilog.rules.package_name = "Discount";
+      priority = 0;
+      property status = "new";
+      when {
+         the_quantity_input: java.lang.Long() from quantity;
+         the_category_input: myModel.Category() from category;
+         myModel.Category() from category;
+         evaluate ((((category.equals(myModel.Category.Computers))) && (quantity.longValue() >= 10)));
+      } then {
+         Discount = java.lang.Double.valueOf((double) 20 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'Discount_General_DT 3'
+// -- begin rule 'Discount_General_DT 4'
+package Discount {
+   use quantity;
+   use category;
+   use Discount;
+   /**
+ */
+rule Discount$_$General$_$DT_4 {
+      property ilog.rules.business_name = "Discount_General_DT 5";
+      property ilog.rules.dt = "Discount.Discount_General_DT";
+      property ilog.rules.group = "Discount.Discount$_$General$_$DT";
+      property ilog.rules.package_name = "Discount";
+      priority = 0;
+      property status = "new";
+      when {
+         the_quantity_input: java.lang.Long() from quantity;
+         the_category_input: myModel.Category() from category;
+         myModel.Category() from category;
+         evaluate (((!((((category.equals(myModel.Category.Books))) || ((category.equals(myModel.Category.Computers)))))) && (quantity.longValue() > 10000)));
+      } then {
+         Discount = java.lang.Double.valueOf((double) 10 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'Discount_General_DT 4'
+// end DT Discount_General_DT

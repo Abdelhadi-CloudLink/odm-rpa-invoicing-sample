@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>varset</name>
+  <uuid>87f1de9a-51c3-43c1-9a89-c61590cd8066</uuid>
+  <variables name="VAT" type="myModel.Vat" initialValue="" verbalization="the VAT"/>
+  <variables name="Discount" type="java.lang.Double" initialValue="" verbalization="the discount"/>
+  <variables name="Tax_Rate" type="java.lang.Double" initialValue="" verbalization="the tax rate"/>
+  <variables name="Gross_Price" type="java.lang.Double" initialValue="" verbalization="the gross price"/>
+  <variables name="Net_Price" type="java.lang.Double" initialValue="" verbalization="the net price"/>
+</ilog.rules.studio.model.base:VariableSet>

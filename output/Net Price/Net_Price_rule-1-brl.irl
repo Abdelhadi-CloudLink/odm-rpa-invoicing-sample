@@ -1,0 +1,21 @@
+package Net_Price {
+   use Gross_Price;
+   use Tax_Rate;
+   use Net_Price;
+   /**
+ */
+rule Net$_$Price$_$rule$45$1 {
+      property ilog.rules.business_name = "Net_Price_rule-1";
+      property ilog.rules.package_name = "Net Price";
+      priority = 0;
+      property status = "new";
+      when {
+         the_gross_price_input: java.lang.Double() from Gross_Price;
+         the_tax_rate_input: java.lang.Double() from Tax_Rate;
+      } then {
+         Net_Price = java.lang.Double.valueOf((double)(the_gross_price_input.doubleValue() - the_gross_price_input.doubleValue() * the_tax_rate_input.doubleValue() / 100));
+         ?context.updateContext();
+      }
+   }
+}
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+     <name>Gross_Price_rule-1</name>
+     <uuid>be2b86e8-f91a-4c64-b5c5-d265deaf71fc</uuid>
+     <priority>0</priority>
+     <locale>en_US</locale>
+     <documentation></documentation>
+     <definition><![CDATA[definitions
+	set 'the discount input' to a number from 'the discount' ;
+	set 'the price input' to a number from 'the price' ;
+then
+	set 'the gross price' to 'the price input' - 'the price input' * 'the discount input' / 100 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

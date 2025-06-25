@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>output</name>
+  <uuid>273addb9-8321-494c-9233-f4b80c8e0d48</uuid>
+  <variables name="Result" type="myModel.Result" initialValue="" verbalization="the result"/>
+</ilog.rules.studio.model.base:VariableSet>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="CompleteInvoice_Ruleset" usingRuleflow="true" ruleflowName="mainRuleflow" targetRuleProjectName="CompleteInvoice">
+  <name>Operation</name>
+  <uuid>d515beb7-cd65-46a8-8efc-d6e2017ac5b0</uuid>
+  <referencedVariables variableName="price" variableSetName="input.var">
+    <variableSet href="../rules/input.var#14769e99-5bfe-4e2c-a339-a1d74e686830"/>
+  </referencedVariables>
+  <referencedVariables variableName="quantity" variableSetName="input.var">
+    <variableSet href="../rules/input.var#14769e99-5bfe-4e2c-a339-a1d74e686830"/>
+  </referencedVariables>
+  <referencedVariables variableName="category" variableSetName="input.var">
+    <variableSet href="../rules/input.var#14769e99-5bfe-4e2c-a339-a1d74e686830"/>
+  </referencedVariables>
+  <referencedVariables variableName="Result" variableSetName="output.var" direction="OUT">
+    <variableSet href="../rules/output.var#273addb9-8321-494c-9233-f4b80c8e0d48"/>
+  </referencedVariables>
+  <ruleflow href="../rules/mainRuleflow.rfl#452f8e52-bf1e-41e5-b742-b65c3137f569"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="CompleteInvoicev2_Operation_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../CompleteInvoice#d304e47b-54d1-47ae-bd6b-de74c51ce0f5"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

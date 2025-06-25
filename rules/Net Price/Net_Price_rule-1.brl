@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+     <name>Net_Price_rule-1</name>
+     <uuid>e365f9e3-fc61-48f4-96e6-4918100c262b</uuid>
+     <priority>0</priority>
+     <locale>en_US</locale>
+     <documentation></documentation>
+     <definition><![CDATA[definitions
+	set 'the gross price input' to a number from 'the gross price' ;
+	set 'the tax rate input' to a number from 'the tax rate' ;
+then
+	set 'the net price' to 'the gross price input' - 'the gross price input' * 'the tax rate input' / 100 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

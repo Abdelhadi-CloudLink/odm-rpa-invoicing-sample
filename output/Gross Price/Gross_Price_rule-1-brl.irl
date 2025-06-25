@@ -1,0 +1,21 @@
+package Gross_Price {
+   use Discount;
+   use price;
+   use Gross_Price;
+   /**
+ */
+rule Gross$_$Price$_$rule$45$1 {
+      property ilog.rules.business_name = "Gross_Price_rule-1";
+      property ilog.rules.package_name = "Gross Price";
+      priority = 0;
+      property status = "new";
+      when {
+         the_discount_input: java.lang.Double() from Discount;
+         the_price_input: java.lang.Double() from price;
+      } then {
+         Gross_Price = java.lang.Double.valueOf((double)(the_price_input.doubleValue() - the_price_input.doubleValue() * the_discount_input.doubleValue() / 100));
+         ?context.updateContext();
+      }
+   }
+}
+

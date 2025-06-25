@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><ilog.rules.studio.model.dt:DecisionTable xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+  <name>Tax_Rate_dt-1</name>
+  <uuid>ea94c13b-fd88-434b-8ee5-0abff38df146</uuid>
+  <priority>0</priority>
+  <locale>en_US</locale>
+  <documentation/>
+  <definition>
+        <DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+            <Body>
+                <Properties>
+                    <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+                    <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+                </Properties>
+                <Preconditions>
+                    <Text><![CDATA[definitions
+	set 'the VATInput' to a vat from 'the VAT' ;]]></Text>
+                </Preconditions>
+                <Structure>
+                    <ConditionDefinitions>
+                        <ConditionDefinition Id="C0">
+                            <ExpressionDefinition>
+                                <Text><![CDATA['the VAT' is <an object>]]></Text>
+                            </ExpressionDefinition>
+                        </ConditionDefinition>
+                    </ConditionDefinitions>
+                    <ActionDefinitions>
+                        <ActionDefinition Id="A0">
+                            <ExpressionDefinition>
+                                <Text><![CDATA[set 'the tax rate' to <a number>]]></Text>
+                            </ExpressionDefinition>
+                        </ActionDefinition>
+                    </ActionDefinitions>
+                </Structure>
+                <Contents>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[VAT55]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[5.5]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[VAT10]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[10]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[VAT20]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[20]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[VAT21]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[2.1]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression/>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression/>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression/>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression/>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression/>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression/>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression/>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression/>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression/>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression/>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression/>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression/>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Contents>
+            </Body>
+            <Resources DefaultLocale="en_US">
+                <ResourceSet Locale="en_US">
+                    <Data Name="Definitions(A0)#HeaderText"><![CDATA[Tax Rate]]></Data>
+                    <Data Name="Definitions(A0)#Width"><![CDATA[80]]></Data>
+                    <Data Name="Definitions(C0)#HeaderText"><![CDATA[VAT]]></Data>
+                    <Data Name="Definitions(C0)#Width"><![CDATA[80]]></Data>
+                </ResourceSet>
+            </Resources>
+        </DT>
+    </definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,75 @@
+
+property Creator "Decision Composer:8.9.0.0"
+property loadGetterSetterAsProperties "true"
+property origin "xom:/CompleteInvoicev2//CompleteInvoicev2/resources/CompleteInvoicev2_Xom.jar"
+property uuid "838ee1ef-d52d-4be5-9d29-9f9aa516788e"
+package myModel;
+
+
+public final class Category
+        extends java.lang.Enum
+        property "dmn.class" "true"
+{
+    domain {static Grocery, static Books, static Newspapers, static Clothing, static Health, static Computers}
+    public static final readonly myModel.Category Books
+                property update "true";
+    public static final readonly myModel.Category Clothing
+                property update "true";
+    public static final readonly myModel.Category Computers
+                property update "true";
+    public static final readonly myModel.Category Grocery
+                property update "true";
+    public static final readonly myModel.Category Health
+                property update "true";
+    public static final readonly myModel.Category Newspapers
+                property update "true";
+    public static myModel.Category valueOf(string arg);
+    public static myModel.Category[] values();
+}
+
+public class Result
+        property "dmn.class" "true"
+{
+    public java.lang.Double discount
+                property update "true";
+    public java.lang.Double grossPrice
+                property update "true";
+    public java.lang.Double netPrice
+                property update "true";
+    public myModel.Tax tax
+                property update "true";
+    public Result();
+}
+
+public class Tax
+        property "dmn.class" "true"
+{
+    public myModel.Vat label
+                property update "true";
+    public java.lang.Double rate
+                property update "true";
+    public Tax(myModel.Vat label, java.lang.Double rate)
+                property "argumentAttribute[0]" "label"
+                property "argumentAttribute[1]" "rate"
+                property groups "Standard"
+                property prototype "true";
+    public Tax();
+}
+
+public final class Vat
+        extends java.lang.Enum
+        property "dmn.class" "true"
+{
+    domain {static VAT20, static VAT10, static VAT55, static VAT21}
+    public static final readonly myModel.Vat VAT10
+                property update "true";
+    public static final readonly myModel.Vat VAT20
+                property update "true";
+    public static final readonly myModel.Vat VAT21
+                property update "true";
+    public static final readonly myModel.Vat VAT55
+                property update "true";
+    public static myModel.Vat valueOf(string arg);
+    public static myModel.Vat[] values();
+}
+

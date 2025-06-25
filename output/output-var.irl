@@ -1,0 +1,3 @@
+variables {
+  myModel.Result Result;
+}

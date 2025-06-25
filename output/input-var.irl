@@ -1,0 +1,5 @@
+variables {
+  java.lang.Double price;
+  java.lang.Long quantity;
+  myModel.Category category;
+}

@@ -1,0 +1,22 @@
+package Discount {
+   use category;
+   use quantity;
+   use Discount;
+   /**
+ */
+rule Discount$_$Groceries {
+      property ilog.rules.business_name = "Discount_Groceries";
+      property ilog.rules.package_name = "Discount";
+      priority = 0;
+      property status = "new";
+      when {
+         myModel.Category() from category;
+         evaluate (((category.equals(myModel.Category.Grocery))
+         	&& quantity.longValue() > 100));
+      } then {
+         Discount = java.lang.Double.valueOf((double) 12 );
+         ?context.updateContext();
+      }
+   }
+}
+

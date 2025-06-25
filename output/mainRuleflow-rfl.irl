@@ -1,0 +1,62 @@
+
+flowtask mainRuleflow {
+  property mainflowtask = false;
+  property ilog.rules.business_name = "mainRuleflow";
+  property ilog.rules.package_name = "";
+  body {
+    mainRuleflow#discount$_$and$_$vat;
+    mainRuleflow#tax$_$and$_$gross$_$price;
+    mainRuleflow#net$_$price;
+    mainRuleflow#result;
+  }
+};
+
+ruletask mainRuleflow#discount$_$and$_$vat {
+  property ilog.rules.business_name = "mainRuleflow>discount_and_vat";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  ordering = sorted;
+  body {
+    Discount.*,
+    VAT.*
+
+  }
+};
+
+ruletask mainRuleflow#tax$_$and$_$gross$_$price {
+  property ilog.rules.business_name = "mainRuleflow>tax_and_gross_price";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  ordering = sorted;
+  body {
+    group("Tax_Rate.Tax$_$Rate$_$dt$45$1"),
+    Gross_Price.Gross$_$Price$_$rule$45$1
+
+  }
+};
+
+ruletask mainRuleflow#net$_$price {
+  property ilog.rules.business_name = "mainRuleflow>net_price";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  ordering = sorted;
+  body {
+    Net_Price.Net$_$Price$_$rule$45$1
+  }
+};
+
+ruletask mainRuleflow#result {
+  property ilog.rules.business_name = "mainRuleflow>result";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  ordering = sorted;
+  initialaction {
+    Result = new myModel.Result();
+    Result.tax = new myModel.Tax();
+
+  };
+  body {
+    Result.Result$_$rule$45$1
+  }
+};
+

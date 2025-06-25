@@ -1,0 +1,42 @@
+# Vocabulary Properties
+uuid = 3e4823f2-50b9-45c3-94f7-8b5959edb063
+
+# myModel.Category
+myModel.Category#concept.label = category
+myModel.Category.Books#instance.label = books
+myModel.Category.Clothing#instance.label = clothing
+myModel.Category.Computers#instance.label = computers
+myModel.Category.Grocery#instance.label = grocery
+myModel.Category.Health#instance.label = health
+myModel.Category.Newspapers#instance.label = newspapers
+myModel.Category.valueOf(java.lang.String)#phrase.navigation = category.valueOf({0})
+myModel.Category.values()#phrase.navigation = category.values()
+
+# myModel.Result
+myModel.Result#concept.label = result
+myModel.Result.Result(java.lang.Double,java.lang.Double,java.lang.Double,myModel.Tax)#phrase.navigation = a new {result} where {0, discount} {1, gross price} {2, net price} {3, tax} 
+myModel.Result.discount#phrase.action = set the discount of {this} to {discount}
+myModel.Result.discount#phrase.navigation = {discount} of {this}
+myModel.Result.grossPrice#phrase.action = set the gross price of {this} to {gross price}
+myModel.Result.grossPrice#phrase.navigation = {gross price} of {this}
+myModel.Result.netPrice#phrase.action = set the net price of {this} to {net price}
+myModel.Result.netPrice#phrase.navigation = {net price} of {this}
+myModel.Result.tax#phrase.action = set the tax of {this} to {tax}
+myModel.Result.tax#phrase.navigation = {tax} of {this}
+
+# myModel.Tax
+myModel.Tax#concept.label = tax
+myModel.Tax.Tax(myModel.Vat,java.lang.Double)#phrase.navigation = a new {tax} where {0, label} {1, rate} 
+myModel.Tax.label#phrase.action = set the label of {this} to {label}
+myModel.Tax.label#phrase.navigation = {label} of {this}
+myModel.Tax.rate#phrase.action = set the rate of {this} to {rate}
+myModel.Tax.rate#phrase.navigation = {rate} of {this}
+
+# myModel.Vat
+myModel.Vat#concept.label = vat
+myModel.Vat.VAT10#instance.label = VAT10
+myModel.Vat.VAT20#instance.label = VAT20
+myModel.Vat.VAT21#instance.label = VAT21
+myModel.Vat.VAT55#instance.label = VAT55
+myModel.Vat.valueOf(java.lang.String)#phrase.navigation = vat.valueOf({0})
+myModel.Vat.values()#phrase.navigation = vat.values()

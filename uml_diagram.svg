@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+  <!-- Classes -->
+  <g fill="white" stroke="black" stroke-width="2">
+    <!-- Input Class -->
+    <rect x="50" y="50" width="200" height="120"/>
+    <text x="150" y="80" text-anchor="middle" font-weight="bold">Input</text>
+    <line x1="50" y1="90" x2="250" y2="90"/>
+    <text x="60" y="110">+ price: Double</text>
+    <text x="60" y="130">+ quantity: Long</text>
+    <text x="60" y="150">+ category: Category</text>
+
+    <!-- Result Class -->
+    <rect x="300" y="50" width="200" height="160"/>
+    <text x="400" y="80" text-anchor="middle" font-weight="bold">Result</text>
+    <line x1="300" y1="90" x2="500" y2="90"/>
+    <text x="310" y="110">+ grossPrice: Double</text>
+    <text x="310" y="130">+ netPrice: Double</text>
+    <text x="310" y="150">+ tax: Tax</text>
+    <text x="310" y="170">+ discount: Double</text>
+
+    <!-- Tax Class -->
+    <rect x="550" y="50" width="200" height="100"/>
+    <text x="650" y="80" text-anchor="middle" font-weight="bold">Tax</text>
+    <line x1="550" y1="90" x2="750" y2="90"/>
+    <text x="560" y="110">+ rate: Double</text>
+    <text x="560" y="130">+ label: VAT</text>
+
+    <!-- Category Enum -->
+    <rect x="50" y="250" width="200" height="160"/>
+    <text x="150" y="280" text-anchor="middle" font-weight="bold">Category</text>
+    <line x1="50" y1="290" x2="250" y2="290"/>
+    <text x="60" y="310">BOOKS</text>
+    <text x="60" y="330">CLOTHING</text>
+    <text x="60" y="350">GROCERY</text>
+    <text x="60" y="370">HEALTH</text>
+    <text x="60" y="390">COMPUTERS</text>
+
+    <!-- VAT Enum -->
+    <rect x="300" y="250" width="200" height="140"/>
+    <text x="400" y="280" text-anchor="middle" font-weight="bold">VAT</text>
+    <line x1="300" y1="290" x2="500" y2="290"/>
+    <text x="310" y="310">VAT55 (5.5%)</text>
+    <text x="310" y="330">VAT10 (10%)</text>
+    <text x="310" y="350">VAT20 (20%)</text>
+    <text x="310" y="370">VAT21 (21%)</text>
+  </g>
+
+  <!-- Relationships -->
+  <g stroke="black" stroke-width="2" fill="none">
+    <!-- Input to Result -->
+    <line x1="250" y1="110" x2="300" y2="110"/>
+    <polygon points="295,105 300,110 295,115"/>
+
+    <!-- Result to Tax -->
+    <line x1="500" y1="110" x2="550" y2="110"/>
+    <polygon points="545,105 550,110 545,115"/>
+
+    <!-- Input to Category -->
+    <line x1="150" y1="170" x2="150" y2="250"/>
+    <polygon points="145,245 150,250 155,245"/>
+
+    <!-- Tax to VAT -->
+    <line x1="650" y1="150" x2="400" y2="250"/>
+    <polygon points="395,245 400,250 405,245"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold">Complete Invoice System - Class Diagram</text>
+</svg>

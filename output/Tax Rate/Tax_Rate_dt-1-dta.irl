@@ -1,0 +1,102 @@
+// begin DT Tax_Rate_dt-1
+// -- begin rule 'Tax_Rate_dt-1 0'
+package Tax_Rate {
+   use VAT;
+   use Tax_Rate;
+   /**
+ */
+rule Tax$_$Rate$_$dt$45$1_0 {
+      property ilog.rules.business_name = "Tax_Rate_dt-1 1";
+      property ilog.rules.dt = "Tax Rate.Tax_Rate_dt-1";
+      property ilog.rules.group = "Tax_Rate.Tax$_$Rate$_$dt$45$1";
+      property ilog.rules.package_name = "Tax Rate";
+      priority = 0;
+      property status = "new";
+      when {
+         the_VATInput: myModel.Vat() from VAT;
+         myModel.Vat() from VAT;
+         evaluate ((((VAT.equals(myModel.Vat.VAT55)))));
+      } then {
+         Tax_Rate = java.lang.Double.valueOf((double) 5.5d );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'Tax_Rate_dt-1 0'
+// -- begin rule 'Tax_Rate_dt-1 1'
+package Tax_Rate {
+   use VAT;
+   use Tax_Rate;
+   /**
+ */
+rule Tax$_$Rate$_$dt$45$1_1 {
+      property ilog.rules.business_name = "Tax_Rate_dt-1 2";
+      property ilog.rules.dt = "Tax Rate.Tax_Rate_dt-1";
+      property ilog.rules.group = "Tax_Rate.Tax$_$Rate$_$dt$45$1";
+      property ilog.rules.package_name = "Tax Rate";
+      priority = 0;
+      property status = "new";
+      when {
+         the_VATInput: myModel.Vat() from VAT;
+         myModel.Vat() from VAT;
+         evaluate ((((VAT.equals(myModel.Vat.VAT10)))));
+      } then {
+         Tax_Rate = java.lang.Double.valueOf((double) 10 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'Tax_Rate_dt-1 1'
+// -- begin rule 'Tax_Rate_dt-1 2'
+package Tax_Rate {
+   use VAT;
+   use Tax_Rate;
+   /**
+ */
+rule Tax$_$Rate$_$dt$45$1_2 {
+      property ilog.rules.business_name = "Tax_Rate_dt-1 3";
+      property ilog.rules.dt = "Tax Rate.Tax_Rate_dt-1";
+      property ilog.rules.group = "Tax_Rate.Tax$_$Rate$_$dt$45$1";
+      property ilog.rules.package_name = "Tax Rate";
+      priority = 0;
+      property status = "new";
+      when {
+         the_VATInput: myModel.Vat() from VAT;
+         myModel.Vat() from VAT;
+         evaluate ((((VAT.equals(myModel.Vat.VAT20)))));
+      } then {
+         Tax_Rate = java.lang.Double.valueOf((double) 20 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'Tax_Rate_dt-1 2'
+// -- begin rule 'Tax_Rate_dt-1 3'
+package Tax_Rate {
+   use VAT;
+   use Tax_Rate;
+   /**
+ */
+rule Tax$_$Rate$_$dt$45$1_3 {
+      property ilog.rules.business_name = "Tax_Rate_dt-1 4";
+      property ilog.rules.dt = "Tax Rate.Tax_Rate_dt-1";
+      property ilog.rules.group = "Tax_Rate.Tax$_$Rate$_$dt$45$1";
+      property ilog.rules.package_name = "Tax Rate";
+      priority = 0;
+      property status = "new";
+      when {
+         the_VATInput: myModel.Vat() from VAT;
+         myModel.Vat() from VAT;
+         evaluate ((((VAT.equals(myModel.Vat.VAT21)))));
+      } then {
+         Tax_Rate = java.lang.Double.valueOf((double) 2.1d );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'Tax_Rate_dt-1 3'
+// end DT Tax_Rate_dt-1
