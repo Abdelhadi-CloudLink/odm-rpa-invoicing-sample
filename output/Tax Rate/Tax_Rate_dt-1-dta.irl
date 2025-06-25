@@ -1,11 +1,11 @@
 // begin DT Tax_Rate_dt-1
-// -- begin rule 'Tax_Rate_dt-1 0'
+// -- begin rule 'Tax_Rate_dt-1 0000000000'
 package Tax_Rate {
    use VAT;
    use Tax_Rate;
    /**
  */
-rule Tax$_$Rate$_$dt$45$1_0 {
+rule Tax$_$Rate$_$dt$45$1_0000000000 {
       property ilog.rules.business_name = "Tax_Rate_dt-1 1";
       property ilog.rules.dt = "Tax Rate.Tax_Rate_dt-1";
       property ilog.rules.group = "Tax_Rate.Tax$_$Rate$_$dt$45$1";
@@ -23,14 +23,14 @@ rule Tax$_$Rate$_$dt$45$1_0 {
    }
 }
 
-// -- end rule 'Tax_Rate_dt-1 0'
-// -- begin rule 'Tax_Rate_dt-1 1'
+// -- end rule 'Tax_Rate_dt-1 0000000000'
+// -- begin rule 'Tax_Rate_dt-1 0000000001'
 package Tax_Rate {
    use VAT;
    use Tax_Rate;
    /**
  */
-rule Tax$_$Rate$_$dt$45$1_1 {
+rule Tax$_$Rate$_$dt$45$1_0000000001 {
       property ilog.rules.business_name = "Tax_Rate_dt-1 2";
       property ilog.rules.dt = "Tax Rate.Tax_Rate_dt-1";
       property ilog.rules.group = "Tax_Rate.Tax$_$Rate$_$dt$45$1";
@@ -48,14 +48,14 @@ rule Tax$_$Rate$_$dt$45$1_1 {
    }
 }
 
-// -- end rule 'Tax_Rate_dt-1 1'
-// -- begin rule 'Tax_Rate_dt-1 2'
+// -- end rule 'Tax_Rate_dt-1 0000000001'
+// -- begin rule 'Tax_Rate_dt-1 0000000002'
 package Tax_Rate {
    use VAT;
    use Tax_Rate;
    /**
  */
-rule Tax$_$Rate$_$dt$45$1_2 {
+rule Tax$_$Rate$_$dt$45$1_0000000002 {
       property ilog.rules.business_name = "Tax_Rate_dt-1 3";
       property ilog.rules.dt = "Tax Rate.Tax_Rate_dt-1";
       property ilog.rules.group = "Tax_Rate.Tax$_$Rate$_$dt$45$1";
@@ -73,14 +73,14 @@ rule Tax$_$Rate$_$dt$45$1_2 {
    }
 }
 
-// -- end rule 'Tax_Rate_dt-1 2'
-// -- begin rule 'Tax_Rate_dt-1 3'
+// -- end rule 'Tax_Rate_dt-1 0000000002'
+// -- begin rule 'Tax_Rate_dt-1 0000000003'
 package Tax_Rate {
    use VAT;
    use Tax_Rate;
    /**
  */
-rule Tax$_$Rate$_$dt$45$1_3 {
+rule Tax$_$Rate$_$dt$45$1_0000000003 {
       property ilog.rules.business_name = "Tax_Rate_dt-1 4";
       property ilog.rules.dt = "Tax Rate.Tax_Rate_dt-1";
       property ilog.rules.group = "Tax_Rate.Tax$_$Rate$_$dt$45$1";
@@ -98,5 +98,5 @@ rule Tax$_$Rate$_$dt$45$1_3 {
    }
 }
 
-// -- end rule 'Tax_Rate_dt-1 3'
+// -- end rule 'Tax_Rate_dt-1 0000000003'
 // end DT Tax_Rate_dt-1

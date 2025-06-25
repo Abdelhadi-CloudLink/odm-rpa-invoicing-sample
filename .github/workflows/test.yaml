@@ -1,0 +1,30 @@
+name: Test Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Basic Project Structure Test
+      run: |
+        # Check if essential project files exist
+        test -f .project
+        test -f .ruleproject
+        test -d bom
+        test -d rules
+        test -d deployment
+
+    - name: Check Rule Files
+      run: |
+        # Verify presence of rule files
+        test -f "rules/Discount/Discount_General_DT.dta"
+        test -f "rules/Discount/Discount_Groceries.brl"
+        test -f "rules/mainRuleflow.rfl"

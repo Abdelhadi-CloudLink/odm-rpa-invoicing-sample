@@ -1,11 +1,11 @@
 // begin DT VAT_dt-1
-// -- begin rule 'VAT_dt-1 0'
+// -- begin rule 'VAT_dt-1 0000000000'
 package VAT {
    use category;
    use VAT;
    /**
  */
-rule VAT$_$dt$45$1_0 {
+rule VAT$_$dt$45$1_0000000000 {
       property ilog.rules.business_name = "VAT_dt-1 1";
       property ilog.rules.dt = "VAT.VAT_dt-1";
       property ilog.rules.group = "VAT.VAT$_$dt$45$1";
@@ -23,14 +23,14 @@ rule VAT$_$dt$45$1_0 {
    }
 }
 
-// -- end rule 'VAT_dt-1 0'
-// -- begin rule 'VAT_dt-1 1'
+// -- end rule 'VAT_dt-1 0000000000'
+// -- begin rule 'VAT_dt-1 0000000001'
 package VAT {
    use category;
    use VAT;
    /**
  */
-rule VAT$_$dt$45$1_1 {
+rule VAT$_$dt$45$1_0000000001 {
       property ilog.rules.business_name = "VAT_dt-1 2";
       property ilog.rules.dt = "VAT.VAT_dt-1";
       property ilog.rules.group = "VAT.VAT$_$dt$45$1";
@@ -48,14 +48,14 @@ rule VAT$_$dt$45$1_1 {
    }
 }
 
-// -- end rule 'VAT_dt-1 1'
-// -- begin rule 'VAT_dt-1 2'
+// -- end rule 'VAT_dt-1 0000000001'
+// -- begin rule 'VAT_dt-1 0000000002'
 package VAT {
    use category;
    use VAT;
    /**
  */
-rule VAT$_$dt$45$1_2 {
+rule VAT$_$dt$45$1_0000000002 {
       property ilog.rules.business_name = "VAT_dt-1 3";
       property ilog.rules.dt = "VAT.VAT_dt-1";
       property ilog.rules.group = "VAT.VAT$_$dt$45$1";
@@ -73,14 +73,14 @@ rule VAT$_$dt$45$1_2 {
    }
 }
 
-// -- end rule 'VAT_dt-1 2'
-// -- begin rule 'VAT_dt-1 3'
+// -- end rule 'VAT_dt-1 0000000002'
+// -- begin rule 'VAT_dt-1 0000000003'
 package VAT {
    use category;
    use VAT;
    /**
  */
-rule VAT$_$dt$45$1_3 {
+rule VAT$_$dt$45$1_0000000003 {
       property ilog.rules.business_name = "VAT_dt-1 4";
       property ilog.rules.dt = "VAT.VAT_dt-1";
       property ilog.rules.group = "VAT.VAT$_$dt$45$1";
@@ -98,14 +98,14 @@ rule VAT$_$dt$45$1_3 {
    }
 }
 
-// -- end rule 'VAT_dt-1 3'
-// -- begin rule 'VAT_dt-1 4'
+// -- end rule 'VAT_dt-1 0000000003'
+// -- begin rule 'VAT_dt-1 0000000004'
 package VAT {
    use category;
    use VAT;
    /**
  */
-rule VAT$_$dt$45$1_4 {
+rule VAT$_$dt$45$1_0000000004 {
       property ilog.rules.business_name = "VAT_dt-1 5";
       property ilog.rules.dt = "VAT.VAT_dt-1";
       property ilog.rules.group = "VAT.VAT$_$dt$45$1";
@@ -123,14 +123,14 @@ rule VAT$_$dt$45$1_4 {
    }
 }
 
-// -- end rule 'VAT_dt-1 4'
-// -- begin rule 'VAT_dt-1 5'
+// -- end rule 'VAT_dt-1 0000000004'
+// -- begin rule 'VAT_dt-1 0000000005'
 package VAT {
    use category;
    use VAT;
    /**
  */
-rule VAT$_$dt$45$1_5 {
+rule VAT$_$dt$45$1_0000000005 {
       property ilog.rules.business_name = "VAT_dt-1 6";
       property ilog.rules.dt = "VAT.VAT_dt-1";
       property ilog.rules.group = "VAT.VAT$_$dt$45$1";
@@ -148,5 +148,5 @@ rule VAT$_$dt$45$1_5 {
    }
 }
 
-// -- end rule 'VAT_dt-1 5'
+// -- end rule 'VAT_dt-1 0000000005'
 // end DT VAT_dt-1

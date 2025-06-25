@@ -1,12 +1,12 @@
 // begin DT Discount_General_DT
-// -- begin rule 'Discount_General_DT 0'
+// -- begin rule 'Discount_General_DT 0000000000'
 package Discount {
    use quantity;
    use category;
    use Discount;
    /**
  */
-rule Discount$_$General$_$DT_0 {
+rule Discount$_$General$_$DT_0000000000 {
       property ilog.rules.business_name = "Discount_General_DT 1";
       property ilog.rules.dt = "Discount.Discount_General_DT";
       property ilog.rules.group = "Discount.Discount$_$General$_$DT";
@@ -25,15 +25,15 @@ rule Discount$_$General$_$DT_0 {
    }
 }
 
-// -- end rule 'Discount_General_DT 0'
-// -- begin rule 'Discount_General_DT 1'
+// -- end rule 'Discount_General_DT 0000000000'
+// -- begin rule 'Discount_General_DT 0000000001'
 package Discount {
    use quantity;
    use category;
    use Discount;
    /**
  */
-rule Discount$_$General$_$DT_1 {
+rule Discount$_$General$_$DT_0000000001 {
       property ilog.rules.business_name = "Discount_General_DT 2";
       property ilog.rules.dt = "Discount.Discount_General_DT";
       property ilog.rules.group = "Discount.Discount$_$General$_$DT";
@@ -52,15 +52,15 @@ rule Discount$_$General$_$DT_1 {
    }
 }
 
-// -- end rule 'Discount_General_DT 1'
-// -- begin rule 'Discount_General_DT 2'
+// -- end rule 'Discount_General_DT 0000000001'
+// -- begin rule 'Discount_General_DT 0000000002'
 package Discount {
    use quantity;
    use category;
    use Discount;
    /**
  */
-rule Discount$_$General$_$DT_2 {
+rule Discount$_$General$_$DT_0000000002 {
       property ilog.rules.business_name = "Discount_General_DT 3";
       property ilog.rules.dt = "Discount.Discount_General_DT";
       property ilog.rules.group = "Discount.Discount$_$General$_$DT";
@@ -79,15 +79,15 @@ rule Discount$_$General$_$DT_2 {
    }
 }
 
-// -- end rule 'Discount_General_DT 2'
-// -- begin rule 'Discount_General_DT 3'
+// -- end rule 'Discount_General_DT 0000000002'
+// -- begin rule 'Discount_General_DT 0000000003'
 package Discount {
    use quantity;
    use category;
    use Discount;
    /**
  */
-rule Discount$_$General$_$DT_3 {
+rule Discount$_$General$_$DT_0000000003 {
       property ilog.rules.business_name = "Discount_General_DT 4";
       property ilog.rules.dt = "Discount.Discount_General_DT";
       property ilog.rules.group = "Discount.Discount$_$General$_$DT";
@@ -106,15 +106,15 @@ rule Discount$_$General$_$DT_3 {
    }
 }
 
-// -- end rule 'Discount_General_DT 3'
-// -- begin rule 'Discount_General_DT 4'
+// -- end rule 'Discount_General_DT 0000000003'
+// -- begin rule 'Discount_General_DT 0000000004'
 package Discount {
    use quantity;
    use category;
    use Discount;
    /**
  */
-rule Discount$_$General$_$DT_4 {
+rule Discount$_$General$_$DT_0000000004 {
       property ilog.rules.business_name = "Discount_General_DT 5";
       property ilog.rules.dt = "Discount.Discount_General_DT";
       property ilog.rules.group = "Discount.Discount$_$General$_$DT";
@@ -133,5 +133,5 @@ rule Discount$_$General$_$DT_4 {
    }
 }
 
-// -- end rule 'Discount_General_DT 4'
+// -- end rule 'Discount_General_DT 0000000004'
 // end DT Discount_General_DT

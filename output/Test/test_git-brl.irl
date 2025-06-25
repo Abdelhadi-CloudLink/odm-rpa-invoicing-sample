@@ -1,0 +1,13 @@
+package Test {
+   rule test$_$git {
+      property ilog.rules.business_name = "test_git";
+      property ilog.rules.package_name = "Test";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+      } then {
+         ilog.rules.brl.System.printMessage("hello");
+      }
+   }
+}
+
